@@ -3,7 +3,7 @@ import requests
 import time
 
 KEY = "6583339131:AAEH2sySsJxdgQCBBjRJdfwPAMvY9sq9-Sg"
-time = 0
+elapsed = 0
 
 def send_message(text: str) -> None:
     try:
@@ -24,8 +24,8 @@ while True:
         print(f"{time.time()} Apts!")
         send_message("Apartments listed!") 
          
-    time += 10
-    if time % 600 == 0 :
+    elapsed += 10
+    if elapsed % 600 == 0 :
         send_message("Scanned for 10 mins, no updates.")
         
     time.sleep(10)
